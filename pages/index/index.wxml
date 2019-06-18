@@ -1,0 +1,116 @@
+<import src="/wxSearch/wxSearch.wxml"/> 
+<view class="wxSearch-section">
+  <view class="wxSearch-pancel">
+    <input bindinput="wxSearchInput" bindfocus="wxSerchFocus" value="{{wxSearchData.value}}" bindblur="wxSearchBlur" class="wxSearch-input" placeholder="搜索" />
+    <button class="wxSearch-button" bindtap="wxSearchFn" size="mini" plain="true">搜索</button>
+  </view>
+</view>
+<template is="wxSearch" data="{{wxSearchData}}"/>
+
+
+
+<view class="container">
+
+
+<view class="selection">
+<view class="cover">
+<swiper indicator-dots="true"
+  autoplay="true" interval="4000" duration="1000" circular="true">
+  <block wx:for="{{imgUrls}}">
+    <swiper-item>
+      <image src="{{item}}" class="slide-image" style='width:100%;height:100%'/>
+    </swiper-item>
+  </block>
+</swiper>
+</view>
+</view>
+
+
+<view class="selection">
+<view class="func-area">
+	<view bindtap="showCategories">
+		<image src="../../images/1.png" mode="aspectFill" class="orange" />
+		<text>计算机</text>
+	</view>
+	<view bindtap="showOrders">
+		<image src="../../images/2.png" mode="aspectFill" class="blue" />
+		<text>数学</text>
+	</view>
+  <view bindtap="showCategories">
+		<image src="../../images/3.png" mode="aspectFill" class="red" />
+		<text>英语</text>
+	</view>
+  <view bindtap="showCategories">
+		<image src="../../images/4.png" mode="aspectFill" class="yellow" />
+		<text>文学</text>
+	</view>
+  <view bindtap="showCategories">
+		<image src="../../images/5.png" mode="aspectFill" class="green" />
+		<text>经济学</text>
+	</view>
+  <view bindtap="showCategories">
+		<image src="../../images/6.png" mode="aspectFill" class="aa" />
+		<text>管理学</text>
+	</view>
+  <view bindtap="showCategories">
+		<image src="../../images/7.png" mode="aspectFill" class="bb" />
+		<text>心理学</text>
+	</view>
+  <view bindtap="showCategories">
+		<image src="../../images/8.png" mode="aspectFill" class="cc" />
+		<text>更多</text>
+	</view>
+</view>
+</view>
+
+
+<view class="selection">
+     <view class="header">
+         <text>精品推荐</text>
+         <text class="text-all"><navigator url='pages/mine/mine'>全部精品>></navigator></text>
+      </view>
+
+       <view class="content">
+           <view class="content-item" wx:for="{{contentItems}}">
+               <image src="../../images/1.jpg"/>
+               <view class="content-item-text">
+                 <text>这里是标题</text>
+               </view>
+           </view>
+      </view>  
+
+
+</view>
+
+
+
+
+<view class="selection">
+       <view class="header">
+         <text>热门课程</text>
+         <text class="text-all">更多热门>></text>
+      </view>
+
+      <view class="list-item" wx:for="{{listItems}}">
+
+          <view class="list-item-images">
+              <image src="../../images/1.jpg" class="list-item-images-img"/>
+              <image src="../../images/1.jpg" class="avatar"/>
+          </view>
+
+          <view class="list-item-text">
+              <view class="list-item-text-title">
+                 <text>标题标题</text>
+              </view>
+
+              <view class="list-item-text-content">
+                 <text>这是内容内容这是内容内容这是内容内容这是内容内容这是内容内容这是内容内容这是内容内容这是内容内容这是内容内容这是</text>
+              </view>
+          </view>
+
+      </view>
+</view>      
+
+</view>
+
+

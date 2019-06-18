@@ -1,0 +1,174 @@
+@import "/wxSearch/wxSearch.wxss";
+
+.cover{
+
+position: relative;
+
+margin-top: -0rpx;
+
+}
+
+
+.container{
+    height: 100%;
+    width: 100%;
+    background-color:white;
+}
+
+
+.selection{
+  border-bottom: 5px solid #999;
+}
+
+/*功能区*/
+.func-area {
+	display: flex;
+	flex-direction: row;
+   flex-wrap:wrap;
+	margin: 10rpx 0;
+	padding-top: 10rpx;
+	background:rgba(251, 255, 0, 0.432);
+}
+
+.func-area view {
+	width: 25%;
+	text-align: center;
+}
+
+.func-area text{
+	display: block;
+	color: #333;
+	font-size: 30rpx;
+	line-height: 50rpx;
+}
+
+.func-area image {
+	width: 90rpx;
+	height: 90rpx;
+	border-radius: 20rpx;
+}
+
+.orange {
+	background: #f60;
+}
+
+.blue {
+	background: #09f;
+}
+
+.red {
+	background: rgba(0, 238, 255, 0.993);
+}
+
+.yellow {
+	background: rgba(217, 255, 0, 0.904);
+}
+
+.green {
+	background: rgba(0, 255, 13, 0.801);
+}
+
+.aa{
+	background: rgba(255, 0, 191, 0.808);
+}
+
+.bb{
+	background: rgba(55, 0, 255, 0.856);
+}
+
+.cc{
+	background: rgba(255, 0, 0, 0.925);
+}
+
+.header{
+  border-left-width: 3px;
+  border-left-style: solid;
+  border-left-color:red;
+  display: flex;
+  justify-content: space-between;
+  height: 50rpx;
+  padding-left: 10rpx;
+  padding-right: 10rpx;
+  margin-top: 20rpx;
+  margin-bottom: 20rpx;
+}
+
+.text-all{
+ color: red;
+ font-size:15px;
+}
+
+.content{
+  display: flex;
+  flex-direction: row;
+  flex-wrap:wrap;
+  justify-content: center;
+}
+
+.content-item{
+  height:250rpx;
+  width:45%;
+  background-color: greenyellow;
+  margin:5px;
+  position: relative;
+}
+
+.content-item image{
+  height: 100%;
+  width: 100%;
+}
+
+.content-item-text{
+  position: absolute;
+  bottom: 0px;
+  color: white;
+  font-size: 10px;
+  background: -webkit-linear-gradient(bottom,rgba(0,0,0,0.5),rgba(0,0,0,0));
+  height:100rpx;
+  width:96%;
+  display: flex;
+  flex-direction:column;
+  justify-content: flex-end; 
+  padding-left: 2%;
+  padding-right: 2%;
+  padding-bottom: 2%;
+}
+
+.list-item{
+  height: 500rpx;
+  width:100%;
+}
+
+.list-item-images{
+ height: 300rpx;
+ width:100%;
+ position: relative;
+}
+
+.list-item-images-img{
+ height:100%;
+ width:100%;
+}
+
+.avatar{
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+  position: absolute;
+  bottom: -50rpx;
+  right: 100rpx;
+}
+
+.list-item-text{
+  height: 200rpx;
+  width:96%;
+  margin-top:20rpx;
+  padding-left:2%;
+  padding-right: 2%; 
+}
+
+.list-item-text-content{
+ font-size: 12px;
+ color: #999;
+ margin-top:20rpx;
+}
