@@ -1,0 +1,50 @@
+
+ <view class="whole">
+
+   <view class="left">
+
+    <block wx:for="{{sortType}}">
+      <!--当前项的id等于item项的id，那个就是当前状态-->
+      <!--用data-index记录这个数据在数组的下标位置，使用data-id设置每个item的id值，供打开2级页面使用-->
+      <view class="nav_left_items "          
+        bindtap='switchRightTab'    data-index="{{index}}"     data-id="{{item.sortID}}" 
+          data-name="nav_left_items {{item.sortID}}" style='{{curNav==index?" background-color:white;":""}}' >  
+       {{item.sortName}}  </view>
+
+    </block>
+
+  </view>
+
+
+
+  <view class="right">
+ 
+   <scroll-view  class ="scroll-view scroll_right"   scroll-y="true" style="height:100%;"  bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll" >
+      
+    <!--循环打印课程列表-->
+    <view wx:if="{{sortType[curIndex].ishaveChild}}">
+      <block wx:for="{{sortType[curIndex].courseType}}">
+        <view class="courseTypeBlock">
+        <!--界面跳转 -->  
+          <view class='courseTypeName' >
+             <text>{{item.courseTypeName}}</text>
+          </view>     
+            
+          <view class="'courseListView'">
+            <block wx:for="{{item.course}}">
+                     <view class="courseView">
+                      <!--界面跳转 -->                           
+                      <button class="courseButton" size='mini'><text class="name">{{item.courseName}}
+                      </text>               
+                      </button>                 
+                      </view>
+             </block>
+          </view>
+        </view>
+      </block>
+    </view>
+    <!--如果无数据，则显示数据-->
+        <view class="nodata_text" wx:else>该分类暂无数据</view>
+    </scroll-view>
+  </view>
+ </view>

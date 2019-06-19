@@ -1,7 +1,7 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/classify/classify",
+    "pages/sort/sort",
     "pages/schedule/schedule",
     "pages/mine/mine"
   ],
@@ -22,7 +22,7 @@
         "text":"首页"
       },
       {
-        "pagePath": "pages/classify/classify",
+        "pagePath": "pages/sort/sort",
         "iconPath": "images/classify.png",
         "selectedIconPath": "images/classify1.png",
         "text": "分类"
